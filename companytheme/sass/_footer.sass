@@ -1,0 +1,80 @@
+footer
+    background-color: #403b3b
+    padding-top: 20px
+    padding-bottom: 0px
+    .footer__caption
+        text-transform: uppercase
+        color: #e1e1e1
+        margin-bottom: 15px
+        letter-spacing: 0.8px
+    .footer__menu-wrapper
+        padding-left: 10px
+        .footer-menu__block
+            padding-inline-start: 20px
+            list-style: none
+            .footer-menu__item
+                position: relative
+                line-height: 1.8
+                &::before
+                    content: '\203A'
+                    position: absolute
+                    left: -19px
+                .footer-menu__link
+                    color: #bdbcbc
+    .footer__contact-wrapper
+        margin-left: -10px
+        & > p
+            position: relative
+            color: #bdbcbc
+            margin-bottom: 4px
+            & > a
+                color: #bdbdbc
+        .phone__block, .e-mail__block, .addres__block
+            margin-left: 32px
+        .phone__block::before
+            content: ''
+            display: inline-block
+            position: absolute
+            width: 9px
+            height: 15px
+            background: url('../img/phone_icon.png') center
+            background-size: contain
+            left: -26px
+            top: 2px
+        .e-mail__block::before
+            content: ''
+            display: inline-block
+            position: absolute
+            width: 15px
+            height: 11px
+            background: url('../img/email-icon.png') center
+            background-size: contain
+            left: -29px
+            top: 6px
+        .addres__block::before
+            content: ''
+            display: inline-block
+            position: absolute
+            width: 12px
+            height: 16px
+            background: url('../img/map-icon.png') center
+            background-size: contain
+            left: -27px
+            top: 5px
+    .footer__form-wrapper
+        padding-left: 33px
+.footer--c
+    padding-bottom: 20px
+.copy_right
+    background-color: #2e2d2d
+    padding-top: 28px
+    padding-bottom: 21px
+@media (max-width: 767px)
+    footer .footer__menu-wrapper 
+        padding-left: 0px
+    footer .footer__form-wrapper 
+        padding-left: 0px
+    .copy_right > .container > .row
+        justify-content: center
+    .footer__contact-wrapper
+        margin-bottom: 20px        

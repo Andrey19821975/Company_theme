@@ -1,0 +1,65 @@
+@import var
+html
+    font-size: 14px
+body
+    font-family: $font-family-text
+    font-size: 1rem
+    color: #888
+    font-weight: normal
+
+h1
+    font-family: $font-family-heading
+    font-size: 2.6rem
+    font-weight: bold
+h2
+    font-family: $font-family-heading
+    font-size: 18px
+    color: #555
+    letter-spacing: 0.3px
+    font-weight: normal
+h3
+    font-family: $font-family-heading
+    font-size: 14px
+    color: #888
+    font-weight: normal
+a
+    text-decoration: none
+    color: #fff
+a:hover
+    text-decoration: none
+    color: #010101
+input::placeholder, textarea::placeholder
+    color: #b1b2b2
+    font-size: 12px
+    font-family: $font-family-text
+.form-group
+    margin-bottom: 10px
+.btn.btn-primary
+    text-transform: uppercase
+.form-control
+    border-radius: 0
+    height: 30px
+.form-control:focus
+    box-shadow: none
+    border: none
+.btn-primary
+    color: #fff
+    background-color: #bb4a1b
+    border-color: #bb4a1b
+.btn-primary:hover, .btn-primary:active
+    color: #fff
+    background-color: #A14016
+    border-color: #A14016
+    box-shadow: none!important
+body .btn-primary:not(:disabled):not(.disabled):active
+    background-color: #A14016
+    border-color: #A14016
+    box-shadow: none!important
+@media (min-width: 1200px)
+    .container, .container-lg, .container-md, .container-sm, .container-xl
+        max-width: 960px
+@media (max-width: 768px)
+    h1
+        font-size: 2rem
+    .top_slider .top-slider__wrapper .top-slider__block .block__text
+        font-size: 1rem

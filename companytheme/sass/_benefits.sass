@@ -1,0 +1,54 @@
+.benefits
+    background-color: #EAE1D2
+    padding-top: 40px
+    padding-bottom: 40px
+    .benefits__list
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        .benefits__block
+            cursor: pointer
+            max-width: calc(100%/4 - 15px)
+            margin-left: 15px
+            margin-right: -15px
+        .benefits__wrapper
+            padding-top: 16px
+            padding-right: 6px
+            padding-left: 6px
+            padding-bottom: 48px
+            background-color: #E3D6C3
+            border: 1px solid #ddd1c0
+            display: flex
+            flex-direction: column
+            align-items: center
+            &:hover
+                border-color: #b84e1d
+                .regular
+                    display: none
+                .benefits__block-icon
+                    .hover
+                        display: inline-block
+            .benefits__block-icon
+                margin-bottom: 32px
+                .hover
+                    display: none
+                img
+                    max-width: 100%
+            .benefits__block-heading
+                text-align: center
+                text-transform: uppercase
+            .benefits__block-text
+                text-align: center
+                line-height: 2
+@media (max-width: 991px)
+    .benefits
+        padding-bottom: 15px
+    .benefits .benefits__list .benefits__block
+        max-width: calc(100%/2 - 30px)
+        margin-bottom: 25px
+        margin-right: 15px
+@media (max-width: 540px)
+    .benefits
+        padding-bottom: 15px
+    .benefits .benefits__list .benefits__block
+        max-width: calc(100% - 30px)

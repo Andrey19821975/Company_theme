@@ -1,0 +1,47 @@
+.what
+    background-color: #eae1d2
+    padding-top: 39px
+    padding-bottom: 34px
+    .what__caption
+        text-transform: uppercase
+        letter-spacing: 1.2px
+        margin-bottom: 16px
+    .what__text-caption
+        text-transform: uppercase
+    .what__text
+        line-height: 1.75
+    .what__image-wrapper
+        img
+            display: none
+        position: relative
+        background-image: url(../img/img_2.jpg)
+        background-repeat: no-repeat
+        height: 100%
+        background-position: bottom right
+        &::before
+            content: 'There are many variations'
+            position: absolute
+            color: #fff
+            bottom: 15px
+            left: 0px
+            background-image: url(../img/image_fone.png)
+            padding: 7px 30px 7px 10px
+            background-size: cover
+            background-position: center right
+.col.col-img
+    max-width: 370px
+.row.white
+    background-color: #F0EAE0
+    padding-top: 20px
+    padding-bottom: 20px
+    box-shadow: 5px 5px 10px rgba(0,0,0, 0.02)
+@media (max-width: 767px)
+    .what .what__image-wrapper
+        margin-bottom: 15px
+    .what .what__image-wrapper img
+        display: inline-block
+        max-width: 100%
+        margin-bottom: 15px
+    .row.white
+        flex-direction: column    
+

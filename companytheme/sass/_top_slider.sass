@@ -1,0 +1,94 @@
+.top_slider
+    height: 520px
+    display: flex
+    align-items: center
+    background: url('../img/top_background.jpg') center
+    background-size: cover
+    .top-slider__wrapper
+        color: #fff
+        padding-left: 15px
+        position: relative
+        .top-slider__block
+            outline: none
+            max-width: 665px
+            min-height: 350px
+            background-color: rgba(76,52,66,0.35)
+            border: 1px solid #745c56
+            margin-bottom: 5px
+            padding-top: 73px
+            padding-left: 25px
+            position: static
+            .top_caption
+                color: #fff
+                margin-bottom: 17px
+                letter-spacing: 0.5px
+            .block__text
+                font-size: 1.71rem
+                text-transform: uppercase
+                color: #fff
+                letter-spacing: 0.7px
+            .top-slider__item
+                outline: none
+
+.slick-dots
+    bottom: -75px
+    left: 0
+    display: flex
+    justify-content: center
+    li
+        width: auto
+        height: auto
+        button
+            width: 40px
+            height: 10px
+            border: 1px solid #c4b3a8
+            background-color: #dbcfc4
+            padding: 0
+            &::before
+                content: none
+.slick-dots li.slick-active button
+    background-color: #bf7b5d
+    border: 1px solid #b87554
+.slick-prev
+    left: -47px
+    top: 39%
+.slick-prev:before
+    content: ''
+    width: 49px
+    height: 49px
+    background: url('../img/left_arrow.png') center
+    background-size: cover
+    display: inline-block
+.slick-prev:hover:before
+    background: url('../img/left_arrow_hover.png') center
+.slick-next
+    right: -45px
+    top: 39%
+.slick-next:before
+    content: ''
+    width: 49px
+    height: 49px
+    background: url('../img/right_arrow.png') center
+    background-size: cover
+    display: inline-block
+.slick-next:hover:before
+    background: url('../img/right_arrow_hover.png') center
+@media (max-width: 1100px)
+    .slick-next
+        right: 10px
+    .slick-prev
+        left: -35px
+@media (max-width: 991px)
+    .slick-next
+        right: -10px
+@media (max-width: 767px)
+    .slick-next, .slick-prev
+        display: none
+@media (max-width: 768px)
+    .top_slider .top-slider__wrapper .top-slider__block .block__text
+        font-size: 1rem
+    .top_slider .top-slider__wrapper .top-slider__block
+        min-height: 200px
+        padding-top: 34px
+    .top_slider
+        height: 390px

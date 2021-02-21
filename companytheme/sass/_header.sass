@@ -1,0 +1,153 @@
+@import var
+header
+    background: $color-coral
+.logo__text
+    font-family: $font-family-heading
+    font-size: 36px
+    text-transform: uppercase
+    font-weight: bold
+    word-spacing: 4px
+    color: #65270c
+.menu
+    .menu__block
+        list-style: none
+        display: flex
+        justify-content: flex-end
+        margin-bottom: 0
+        margin-right: -15px
+        margin-block-start: 0
+        padding-inline-start: 0
+        .menu__item
+            padding-left: 35px
+            position: relative
+            .menu__link
+                text-transform: uppercase
+                &--sub, &--sub:hover
+                    color: #181414
+                    text-transform: uppercase
+            .sub-menu__block
+                margin-block-start: 0
+                padding-inline-start: 0
+                position: absolute
+                list-style: none
+                width: 145px
+                background-color: $color-light
+                left: 28px
+                top: 25px
+                opacity: 0
+                z-index: 100
+                transition: opacity 0.5s
+                &--two.sub-menu__block
+                    top: 0
+                    left: 155px
+                    opacity: 0
+                    &::before
+                        content: '\25C4'
+                        left: -12px
+                        top: 9px
+                &::before
+                    content: '\25B2'
+                    color: #EAE1D2
+                    top: -16px
+                    position: absolute
+                    left: 17px
+                .sub-menu__item
+                    padding: 10px 20px
+                    position: relative
+                    &:hover
+                        background-color: #9e9e9e
+                        .sub-menu__block--two
+                            opacity: 1
+                    &.have-sub::before
+                        content: '\25BA'
+                        position: absolute
+                        right: 3px
+                        color: #454545
+                .sub-menu__item:not(:last-child)
+                    border-bottom: 1px solid #d5caba
+        .menu__item:hover
+            .sub-menu__block:not(.sub-menu__block--two)
+                opacity: 1
+.hamburger-menu
+    display: none
+    justify-content: flex-end
+    align-items: center
+#menu__toggle
+    opacity: 0
+.menu__btn
+    display: flex
+    align-items: center
+    position: relative
+    //top: 20px
+    //left: 20px
+    width: 26px
+    height: 26px
+    cursor: pointer
+    z-index: 1
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after
+    display: block
+    position: absolute
+    width: 100%
+    height: 4px
+    background-color: #fff
+.menu__btn > span::before
+    content: ''
+    top: -8px
+.menu__btn > span::after
+    content: ''
+    top: 8px
+/* контейнер меню */
+.menu__box
+    display: block
+    position: fixed
+    visibility: hidden
+    top: 0
+    right: 100%
+    width: 300px
+    height: 100%
+    margin: 0
+    padding: 80px 0
+    list-style: none
+    text-align: center
+    background-color: #BB4A1B
+    z-index: 100
+
+/* элементы меню */
+.mob-menu__item
+    display: block
+    padding: 12px 24px
+    color: #333
+    font-size: 21px
+    text-transform: uppercase
+    text-decoration: none
+
+    &:hover
+        background-color: #CFD8DC
+
+#menu__toggle:checked ~ .menu__btn > span
+    transform: rotate(45deg)
+
+#menu__toggle:checked ~ .menu__btn > span::before
+    top: 0
+    transform: rotate(0)
+
+#menu__toggle:checked ~ .menu__btn > span::after
+    top: 0
+    transform: rotate(90deg)
+
+#menu__toggle:checked ~ .menu__box
+    visibility: visible
+    left: 0
+
+@media (max-width: 991px)
+    .menu
+        display: none
+    .hamburger-menu
+        display: flex
+
+
+@media (max-width: 500px)
+    .menu__box
+        width: 260px

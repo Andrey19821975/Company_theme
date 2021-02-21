@@ -1,0 +1,48 @@
+.portfolios
+    background-color: #bb4a1b
+    padding-top: 39px
+    padding-bottom: 34px
+    .portfolios__wrapper
+        max-width: 940px
+        width: 100%
+        margin: 0 auto
+        padding-left: 15px
+        padding-right: 15px
+        .porfolios__item
+            overflow: hidden
+            .portfolio__name-wrapper
+                padding: 5px 10px
+                background-color: #2e2d2d
+                color: #fff
+                text-align: center
+.owl-nav
+    margin-top: 5px
+    text-align: right
+    padding-right: 20px
+    .owl-prev
+        span
+            display: none
+        &:before
+            content: ''
+            width: 33px
+            height: 33px
+            background: url('../img/left_arrow_small.png') center
+            background-size: cover
+            display: inline-block
+    .owl-prev:hover:before
+        background: url('../img/left_arrow_small_hover.png') center
+    .owl-next
+        span
+            display: none
+        &:before
+            content: ''
+            width: 33px
+            height: 33px
+            background: url('../img/right_arrow_small.png') center
+            background-size: cover
+            display: inline-block
+    .owl-next:hover:before
+        background: url('../img/right_arrow_small_hover.png') center
+.portfolio__caption
+    color: #fff
+    margin-bottom: 13px
